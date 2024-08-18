@@ -4,76 +4,84 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
 body {
     background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
 }
-
 h1 {
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-top: 20px;
 }
-
 .paragrafo-1 {
     color: greenyellow;
-    font-size: 10px;
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
-
 .paragrafo-2 {
     color: rgb(168, 161, 161);
-    font-size: 11px;
+    font-size: 0.9rem;
     margin-top: 10px;
+    text-align: center;
 }
-
 .caixa-maior {
-    background-color: #000000;
-    width: 95%;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
     max-width: 420px;
-    opacity: 0.8;
     padding: 20px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50%;
 }
-
 img {
     width: 100px;
     height: 100px;
-    overflow: hidden;
     border-radius: 50%;
-    display: flex;
-
+    object-fit: cover;
 }
-
 .profile-buttons {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    padding: 10px 20px;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
 }
-
 button {
     border: none;
     outline: none;
     padding: 10px;
-    float: right;
     cursor: pointer;
-    background-color: #7c7c7c2b;
+    background-color: rgba(124, 124, 124, 0.2);
     color: azure;
     text-align: center;
-    width: 200px;
-    border-radius: 10px
- }
-
- button:hover {
+    width: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+button:hover {
     background-color: rgb(122, 147, 86);
+}
+
+@media (max-width: 480px) {
+    .caixa-maior {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    .paragrafo-1 {
+        font-size: 0.7rem;
+    }
+    .paragrafo-2 {
+        font-size: 0.8rem;
+    }
+    .profile-buttons {
+        max-width: 250px;
+    }
 }
